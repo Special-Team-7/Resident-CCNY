@@ -52,6 +52,11 @@ function Navigation(props) {
           </NavLink>
         </li>
         <li className="nav-item"> 
+          <NavLink className="nav-link" exact to="/">
+            View Events
+          </NavLink>
+        </li>
+        <li className="nav-item"> 
           <NavLink className="nav-link" exact to="/Info">
             Information
           </NavLink>
@@ -59,6 +64,7 @@ function Navigation(props) {
       </ul>
     </div>
     <Link className="navbar-brand" to="/">
+      <img src={ require('./public/logo.png')} width = "50px" height="50px" />
       Resident CCNY
     </Link>
   </nav>
