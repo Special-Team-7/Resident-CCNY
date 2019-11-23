@@ -18,9 +18,9 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.DATEONLY,
       field:'date'
     },
-    tittle: {
+    title: {
       type: DataTypes.TEXT,
-      field:'tittle'
+      field:'title'
     },
     content: {
       type: DataTypes.TEXT,
