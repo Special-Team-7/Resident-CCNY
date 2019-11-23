@@ -10,10 +10,10 @@ import {
 
 import RegisterPage from './pages/RegisterPage';
 import LoginPage from './pages/LoginPage';
-import MapsPage from './pages/MapsPage';
 import HomePage from './pages/HomePage';
-import BathroomList from './components/bathroom-lists/BathroomList';
-import addBathroom from './pages/addBathroomPage';
+import PostFormPage from './pages/PostFormPage';
+import PostsListPage from './pages/PostsListPage';
+import ShowPostPage from './pages/ShowPostPage';
 
 import './App.css';
 
@@ -47,26 +47,25 @@ function Navigation(props) {
             Register
           </NavLink>
         </li>
-        <li className="nav-item">
-          <NavLink className="nav-link" exact to="/Maps">
-            Google Maps
-           </NavLink>
+        <li className="nav-item"> 
+          <NavLink className="nav-link" exact to="/PostForm">
+            PostForm
+          </NavLink>
         </li>
-        <li className="nav-item">
-          <NavLink className="nav-link" exact to="/BathroomList">
-            Bathroom List
-           </NavLink>
+        <li className="nav-item"> 
+          <NavLink className="nav-link" exact to="/PostsList">
+            PostsList
+          </NavLink>
         </li>
-        <li className="nav-item">
-          <NavLink className="nav-link" exact to="/addBathroom">
-            Add Bathroom
-           </NavLink>
+        <li className="nav-item"> 
+          <NavLink className="nav-link" exact to="/ShowPost">
+            ShowPost
+          </NavLink>
         </li>
       </ul>
     </div>
     <Link className="navbar-brand" to="/">
-      <img src={ require('./public/logo.png')} width = "70px" height="40px" />
-      Find It Quick
+      Resident CCNY
     </Link>
     {/* <div className="collapse navbar-collapse aria-expanded=false" id="navbarSupportedContent" >
       <form class="form-inline my-2 my-lg-0">
@@ -95,11 +94,11 @@ class App extends React.Component {
           <div className="container-fluid text-center">
             <div className="row justify-content-center">
               <Switch>
-                <Route path="/BathroomList" component = {BathroomList} />
                 <Route path="/Register" component={RegisterPage} />
                 <Route path="/Login" component={LoginPage} />
-                <Route path="/Maps" component={MapsPage} />
-                <Route path="/addBathroom" component={addBathroom} />
+                <Route path="/PostForm" component={PostFormPage} />
+                <Route path="/PostsList" component={PostsListPage} />
+                <Route path="/ShowPost" component={ShowPostPage} />
                 <Route path="/" component={HomePage} />
               </Switch>
             </div>
