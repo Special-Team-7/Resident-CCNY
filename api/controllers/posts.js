@@ -19,19 +19,37 @@ const { Post } = db;
 router.get('/', (req,res) => {
   Post.findAll({})
     .then(posts => res.json(posts));
+  // res.send("Working");
 });
 
 
-router.post('/', (req, res) => {
-  let { content } = req.body;
+// router.post('/', (req, res) => {
+//   let { content } = req.body;
   
-  Post.create({ content })
-    .then(post => {
-      res.status(201).json(post);
-    })
-    .catch(err => {
-      res.status(400).json(err);
-    });
+//   Post.create({ content })
+//     .then(post => {
+//       res.status(201).json(post);
+//     })
+//     .catch(err => {
+//       res.status(400).json(err);
+//     });
+// });
+
+router.post('/create',(req, res) => {
+  let body = {
+    author : req.body.author,
+    tag : req.body.tag,
+    date : req.body.date,
+    title : req.body.title,
+    content : req.body.content
+  }
+  Post.create({author: body.author, tag: body.tag, date: body.date, title: body.title, content: body.content})
+  .then(info => {
+    console.log(info);
+    res.send(info);
+  }).catch(err => {
+    res.send(err);
+  })
 });
 
 
