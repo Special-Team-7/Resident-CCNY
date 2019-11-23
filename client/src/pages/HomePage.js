@@ -59,11 +59,13 @@ class HomePage extends React.Component {
       <div>
 
       <main role="main">
-        <section className="jumbotron text-center">
+       
           <div className="container">
+            <br/>
             <h1 className="jumbotron-heading">Towers Events</h1>
+            <br/>
           </div>
-        </section>
+        
 
         <div className="album py-5 bg-light">
           <div className="container">
@@ -76,28 +78,31 @@ class HomePage extends React.Component {
                   <div className="card-body">
                     <img src= {this.state.images[Math.round(Math.random()*5)]} height="200" width="300"></img>
                     <hr/>
-                    <h2>Title</h2>
-                    <p className="card-text"> {event.content} </p>
+                    <h2>{event.title}</h2>
+                    <p className="card-text"> {event.content.substring(0, 20)}... </p>
                     
                     <button type="button" className="btn btn-sm btn-outline-secondary" value="Open" onClick={() => this.openModal()}>View</button>
                     <Modal 
                         visible={this.state.visible}
-                        width="400"
-                        height="300"
+                        width="500"
+                        height="400"
                         effect="fadeInUp"
                         onClickAway={() => this.closeModal()}
                     >
                       <div>
-                          <h1>Title</h1>
-                          <p>Some Contents</p>
+                          <h1>{event.title}</h1>
+                          <hr/>
+                          <p><strong>Event Date:</strong> {event.date}</p>
+                          <p><strong>Summary:</strong><br/> {event.content}</p>
+                          <p><strong>Category:</strong> {event.tag}</p>
                           <a href="javascript:void(0);" onClick={() => this.closeModal()}>Close</a>
                       </div>
                     </Modal>
 
                     <br/>
                     <div className="d-flex justify-content-between align-items-center">
-                      <small className="text-muted">Author</small>
-                      <small className="text-muted">11/05/2019</small>
+                      <medium className="text-muted">{event.author}</medium>
+                      <medium className="text-muted">{event.date}</medium>
                     </div>
                     
                   </div>
