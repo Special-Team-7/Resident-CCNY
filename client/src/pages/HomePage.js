@@ -1,18 +1,40 @@
 import React from 'react';
 import Post from '../components/Post';
 import Loading from '../components/Loading';
+import Modal from 'react-awesome-modal';
 
 
 class HomePage extends React.Component {
-  state = {
-    posts: [],
-    loading: true,
-    images: ["https://www.ccny.cuny.edu/sites/default/files/styles/large/public/2019-08/fastfacts_fullcampus_.jpg?itok=GuRkDzxN",
-        "https://www.ccny.cuny.edu/sites/default/files/styles/large/public/2019-09/about_update.jpg?itok=5OWrNx8o",
-        "https://www.ccny.cuny.edu/sites/default/files/CCNY_ShepardHall_Aug2017_6.jpg",
-        "https://www.ccny.cuny.edu/sites/default/files/shepard_hall_image.jpg",
-        "https://media.glassdoor.com/l/b5/95/77/7b/ccny-quad.jpg",
-        "https://www.messynessychic.com/wp-content/uploads/2017/06/ccny.jpg"]
+
+  constructor() {
+    super();
+
+    this.state = {
+      visible : false
+    }
+
+    this.state = { // what does this.state do
+      posts: [],
+      loading: true,
+      images: ["https://www.ccny.cuny.edu/sites/default/files/styles/large/public/2019-08/fastfacts_fullcampus_.jpg?itok=GuRkDzxN",
+          "https://www.ccny.cuny.edu/sites/default/files/styles/large/public/2019-09/about_update.jpg?itok=5OWrNx8o",
+          "https://www.ccny.cuny.edu/sites/default/files/CCNY_ShepardHall_Aug2017_6.jpg",
+          "https://www.ccny.cuny.edu/sites/default/files/shepard_hall_image.jpg",
+          "https://media.glassdoor.com/l/b5/95/77/7b/ccny-quad.jpg",
+          "https://www.messynessychic.com/wp-content/uploads/2017/06/ccny.jpg"]
+    }
+  }
+  
+  openModal() {
+    this.setState({
+        visible : true
+    });
+}
+
+  closeModal() {
+      this.setState({
+          visible : false
+      });
   }
 
   componentDidMount() {
@@ -56,13 +78,28 @@ class HomePage extends React.Component {
                     <hr/>
                     <h2>Title</h2>
                     <p className="card-text"> {event.content} </p>
-                    <div className="d-flex justify-content-between align-items-center">
-                      <div className="btn-group">
-                        <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
+                    
+                    <button type="button" className="btn btn-sm btn-outline-secondary" value="Open" onClick={() => this.openModal()}>View</button>
+                    <Modal 
+                        visible={this.state.visible}
+                        width="400"
+                        height="300"
+                        effect="fadeInUp"
+                        onClickAway={() => this.closeModal()}
+                    >
+                      <div>
+                          <h1>Title</h1>
+                          <p>Some Contents</p>
+                          <a href="javascript:void(0);" onClick={() => this.closeModal()}>Close</a>
                       </div>
-                      <small className="text-muted">9 mins</small>
+                    </Modal>
+
+                    <br/>
+                    <div className="d-flex justify-content-between align-items-center">
+                      <small className="text-muted">Author</small>
+                      <small className="text-muted">11/05/2019</small>
                     </div>
+                    
                   </div>
                 </div>
               </div>  
