@@ -14,6 +14,14 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.TEXT,
       field:'tag'
     },
+    date: {
+      type: DataTypes.DATEONLY,
+      field:'date'
+    },
+    tittle: {
+      type: DataTypes.TEXT,
+      field:'tittle'
+    },
     content: {
       type: DataTypes.TEXT,
       field:'content'
