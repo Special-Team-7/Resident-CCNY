@@ -2,14 +2,14 @@
   "development": {
     "username": "ctp_user",
     "password": "ctp_pass",
-    "database": "FindIt_development",
+    "database": "ResidentCCNY_development",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
     "username": "ctp_user",
     "password": "ctp_pass",
-    "database": "FindIt_test",
+    "database": "ResidentCCNY_test",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },

@@ -10,7 +10,7 @@ class HomePage extends React.Component {
         <div className="row justify-content-center">
         {
           <h1>
-            Home Page. Probably Will Be Google Maps. Just For Testing Purposes.
+            Home Page. 
           </h1>
         }
         </div>
