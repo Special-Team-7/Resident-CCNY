@@ -6,13 +6,18 @@ module.exports = (sequelize, DataTypes) => {
   class Post extends Model {}
 
   Post.init({
-    content: {
-      type: DataTypes.STRING,
-      validate: {
-        len: [3, 250],
-        notEmpty: true,
-      }
+    author: {
+      type: DataTypes.TEXT,
+      field:'author'
     },
+    tag: {
+      type: DataTypes.TEXT,
+      field:'tag'
+    },
+    content: {
+      type: DataTypes.TEXT,
+      field:'content'
+    }
   }, {
     sequelize,
     modelName: 'post'
