@@ -1,7 +1,6 @@
 import React from 'react';
 import Post from '../components/Post';
 import Loading from '../components/Loading';
-import './HomePage.css';
 import Modal from 'react-awesome-modal';
 
 
