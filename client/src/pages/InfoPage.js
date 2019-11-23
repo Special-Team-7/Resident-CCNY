@@ -28,9 +28,12 @@ class InfoPage extends React.Component {
                           TV with comfortable seating. All residents are issued an access card for entry at the 24-Hour Security Desk and there are closed-circuit security 
                           cameras located throughout the building. The Residence Life Staff strives to create a sense of community through educational and social programming 
                           and serves as a resource to all residents.</p>
+                    <hr/>
                     <h2>Where Are We Located?</h2>
                     <p> We're located on 401 W 130th St, New York, NY 10027. <br/> It could also be found on the map on the left.</p>
+                    <hr/>
                     <h2>Our Website: </h2><a href="http://ccnytowers.com/" target="_blank">http://ccnytowers.com/</a>
+                    <hr/>
                     <h2> Our Developers: </h2>
                     <a href="https://github.com/ChibiKev" target="_blank">Kevin Chen</a>
                     <br/>
@@ -41,6 +44,7 @@ class InfoPage extends React.Component {
                     <a href="https://github.com/josueh6758" target="_blank">Josue Hernandez</a>
                     <br/>
                     <a href="https://github.com/bhavrish" target="_blank">Bhavesh Shah</a>
+                    <hr/>
 
                 </div>
             </div>
