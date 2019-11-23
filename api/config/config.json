@@ -1,15 +1,15 @@
 {
   "development": {
-    "username": "ctp_user",
-    "password": "ctp_pass",
-    "database": "ResidentCCNY_development",
+    "username": "residentccny",
+    "password": "ccnypassword",
+    "database": "residentccny_development",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
-    "username": "ctp_user",
-    "password": "ctp_pass",
-    "database": "ResidentCCNY_test",
+    "username": "residentccny",
+    "password": "ccnypassword",
+    "database": "residentccny_test",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
