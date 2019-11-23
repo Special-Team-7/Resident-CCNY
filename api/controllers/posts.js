@@ -37,11 +37,11 @@ router.get('/', (req,res) => {
 
 router.post('/create',(req, res) => {
   let body = {
-    author : req.body.author,
-    tag : req.body.tag,
-    date : req.body.date,
-    title : req.body.title,
-    content : req.body.content
+    author : req.body.content.author,
+    tag : req.body.content.tag,
+    date : req.body.content.date,
+    title : req.body.content.title,
+    content : req.body.content.content
   }
   Post.create({author: body.author, tag: body.tag, date: body.date, title: body.title, content: body.content})
   .then(info => {

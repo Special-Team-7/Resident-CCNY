@@ -45,6 +45,8 @@ class PostFormPage extends React.Component {
 
 
     console.log(this.formatDate(this.state.date));
+    
+    console.log(this.state);
 
     fetch("/api/posts/create", {
       method: 'POST',
