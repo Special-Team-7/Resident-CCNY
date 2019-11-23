@@ -13,7 +13,6 @@ import LoginPage from './pages/LoginPage';
 import HomePage from './pages/HomePage';
 import PostFormPage from './pages/PostFormPage';
 import PostsListPage from './pages/PostsListPage';
-import ShowPostPage from './pages/ShowPostPage';
 
 import './App.css';
 
@@ -57,11 +56,6 @@ function Navigation(props) {
             PostsList
           </NavLink>
         </li>
-        <li className="nav-item"> 
-          <NavLink className="nav-link" exact to="/ShowPost">
-            ShowPost
-          </NavLink>
-        </li>
       </ul>
     </div>
     <Link className="navbar-brand" to="/">
@@ -98,7 +92,6 @@ class App extends React.Component {
                 <Route path="/Login" component={LoginPage} />
                 <Route path="/PostForm" component={PostFormPage} />
                 <Route path="/PostsList" component={PostsListPage} />
-                <Route path="/ShowPost" component={ShowPostPage} />
                 <Route path="/" component={HomePage} />
               </Switch>
             </div>
