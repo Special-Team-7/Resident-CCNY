@@ -12,7 +12,7 @@ import RegisterPage from './pages/RegisterPage';
 import LoginPage from './pages/LoginPage';
 import HomePage from './pages/HomePage';
 import PostFormPage from './pages/PostFormPage';
-import PostsListPage from './pages/PostsListPage';
+import InfoPage from './pages/InfoPage';
 
 import './App.css';
 
@@ -47,13 +47,13 @@ function Navigation(props) {
           </NavLink>
         </li>
         <li className="nav-item"> 
-          <NavLink className="nav-link" exact to="/PostForm">
-            PostForm
+          <NavLink className="nav-link" exact to="/Add">
+            Add Event
           </NavLink>
         </li>
         <li className="nav-item"> 
-          <NavLink className="nav-link" exact to="/PostsList">
-            PostsList
+          <NavLink className="nav-link" exact to="/Info">
+            Information
           </NavLink>
         </li>
       </ul>
@@ -61,12 +61,6 @@ function Navigation(props) {
     <Link className="navbar-brand" to="/">
       Resident CCNY
     </Link>
-    {/* <div className="collapse navbar-collapse aria-expanded=false" id="navbarSupportedContent" >
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div> */}
   </nav>
   );
 }
@@ -90,8 +84,8 @@ class App extends React.Component {
               <Switch>
                 <Route path="/Register" component={RegisterPage} />
                 <Route path="/Login" component={LoginPage} />
-                <Route path="/PostForm" component={PostFormPage} />
-                <Route path="/PostsList" component={PostsListPage} />
+                <Route path="/Add" component={PostFormPage} />
+                <Route path="/Info" component={InfoPage} />
                 <Route path="/" component={HomePage} />
               </Switch>
             </div>
