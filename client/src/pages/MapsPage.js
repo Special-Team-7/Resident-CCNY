@@ -79,5 +79,5 @@ export class MapsPage extends React.Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyCw1Cu5QmZqsFLWq-D7m12E3Qqjjj13xWY'
+  apiKey: 'InsertAPIKeyHere'
 })(MapsPage);
