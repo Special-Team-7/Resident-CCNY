@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {Bathroom,Post,User} = require('../models');
+const {User} = require('../models');
 
 
 //get all users
